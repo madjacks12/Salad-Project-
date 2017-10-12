@@ -1,13 +1,21 @@
 $(document).ready(function() {
-  $("button#Lettuce").click(function() {
-    $("ul").prepend("<li>Lettuce</li>");
-  });
+  $("#blanks form").submit(function(event) {
+    var firstnameInput = $("input#firstname").val();
+    var lastnameInput = $("input#lastname").val();
+    var streetaddressInput= $("input#streetaddress").val();
+    var cityInput = $("input#city").val();
+    var stateInput = $("input#state").val();
+    var zipInput = $("input#zip").val();
 
-  $("button#Tomato").click(function() {
-    $("ul").prepend("<li>Tomato</li>");
-  });
+    $(".firstname").text(firstnameInput);
+    $(".lastname").text(lastnameInput);
+    $(".streetaddress").text(streetaddressInput);
+    $(".city").text(cityInput);
+    $(".state").text(stateInput);
+    $(".zip").text(zipInput);
 
-  $("button#Cucumber").click(function() {
-    $("ul").prepend("<li>Cucumber!</li>");
+    $("#story").show();
+
+    event.preventDefault();
   });
 });

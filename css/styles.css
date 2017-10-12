@@ -1,0 +1,13 @@
+#story {
+  display: none;
+}
+
+.btn {
+  background-color: lightgreen;
+}
+
+img {
+  margin: 30px;
+  height: 200px;
+  width: 300px;
+}
